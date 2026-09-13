@@ -11,7 +11,7 @@ jobs:
   reflint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
       - uses: ./
 
   test:
@@ -25,7 +25,7 @@ jobs:
       matrix:
         node: ['18.x', '20.x', '22.x', '24.x']
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
       - uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node }}
@@ -37,7 +37,7 @@ jobs:
     # so enforcing a different one would be churn rather than improvement.
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
       - uses: actions/setup-node@v7
         with:
           node-version: 22
